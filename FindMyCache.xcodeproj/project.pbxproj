@@ -17,6 +17,11 @@
 		2C8B08CE2B4CA014004E8939 /* SettingsAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B08CD2B4CA014004E8939 /* SettingsAppView.swift */; };
 		2C8B08D12B4CA039004E8939 /* ColorSchemeModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B08D02B4CA039004E8939 /* ColorSchemeModeView.swift */; };
 		2C8B08D32B4CA066004E8939 /* Bundle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B08D22B4CA066004E8939 /* Bundle+.swift */; };
+		2C8B08D52B4F20A0004E8939 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B08D42B4F20A0004E8939 /* APIClient.swift */; };
+		2C8B08D72B4F21CD004E8939 /* Codable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B08D62B4F21CD004E8939 /* Codable+.swift */; };
+		2C8B08D92B4F2455004E8939 /*  ASUserDetectionStatus+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B08D82B4F2455004E8939 /*  ASUserDetectionStatus+.swift */; };
+		2C8B08DB2B4F2800004E8939 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B08DA2B4F2800004E8939 /* User.swift */; };
+		2C8B08DD2B502F05004E8939 /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B08DC2B502F05004E8939 /* Data+.swift */; };
 		2CAEE01D2B488403000F9FB1 /* AppleAuthorizationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAEE01C2B488403000F9FB1 /* AppleAuthorizationClient.swift */; };
 		2CAEE01F2B492544000F9FB1 /* KeychainClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAEE01E2B492544000F9FB1 /* KeychainClient.swift */; };
 		2CD9B2662B46E54F00787EC5 /* FindMyCacheApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9B2652B46E54F00787EC5 /* FindMyCacheApp.swift */; };
@@ -68,6 +73,11 @@
 		2C8B08CD2B4CA014004E8939 /* SettingsAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAppView.swift; sourceTree = "<group>"; };
 		2C8B08D02B4CA039004E8939 /* ColorSchemeModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeModeView.swift; sourceTree = "<group>"; };
 		2C8B08D22B4CA066004E8939 /* Bundle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+.swift"; sourceTree = "<group>"; };
+		2C8B08D42B4F20A0004E8939 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		2C8B08D62B4F21CD004E8939 /* Codable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+.swift"; sourceTree = "<group>"; };
+		2C8B08D82B4F2455004E8939 /*  ASUserDetectionStatus+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ASUserDetectionStatus+.swift"; sourceTree = "<group>"; };
+		2C8B08DA2B4F2800004E8939 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2C8B08DC2B502F05004E8939 /* Data+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+.swift"; sourceTree = "<group>"; };
 		2CAEE0152B487D1F000F9FB1 /* FindMyCache.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FindMyCache.entitlements; sourceTree = "<group>"; };
 		2CAEE01C2B488403000F9FB1 /* AppleAuthorizationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthorizationClient.swift; sourceTree = "<group>"; };
 		2CAEE01E2B492544000F9FB1 /* KeychainClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainClient.swift; sourceTree = "<group>"; };
@@ -169,7 +179,10 @@
 		2C8B08CA2B4C9FD3004E8939 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2C8B08D82B4F2455004E8939 /*  ASUserDetectionStatus+.swift */,
 				2C8B08D22B4CA066004E8939 /* Bundle+.swift */,
+				2C8B08D62B4F21CD004E8939 /* Codable+.swift */,
+				2C8B08DC2B502F05004E8939 /* Data+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -234,6 +247,7 @@
 			children = (
 				2CAEE01C2B488403000F9FB1 /* AppleAuthorizationClient.swift */,
 				2CAEE01E2B492544000F9FB1 /* KeychainClient.swift */,
+				2C8B08D42B4F20A0004E8939 /* APIClient.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -321,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				2CDF48A92B4965BE0001644A /* Cache.swift */,
+				2C8B08DA2B4F2800004E8939 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -488,7 +503,9 @@
 				2C8B08D32B4CA066004E8939 /* Bundle+.swift in Sources */,
 				2C49918A2B483DD100EC5BE3 /* PagerItemView.swift in Sources */,
 				2CDF48A72B4963A60001644A /* MapFeature.swift in Sources */,
+				2C8B08DB2B4F2800004E8939 /* User.swift in Sources */,
 				2CDF48B82B4A19DB0001644A /* CreateCacheFeature.swift in Sources */,
+				2C8B08D52B4F20A0004E8939 /* APIClient.swift in Sources */,
 				2CDF48B02B499E0F0001644A /* UserSectionView.swift in Sources */,
 				2C4991872B48233400EC5BE3 /* PagerItem.swift in Sources */,
 				2CD9B2962B4701E300787EC5 /* PagerFeature.swift in Sources */,
@@ -499,10 +516,13 @@
 				2CDF48B32B49A0B70001644A /* FrequentQuestionsView.swift in Sources */,
 				2C8B08D12B4CA039004E8939 /* ColorSchemeModeView.swift in Sources */,
 				2CAEE01F2B492544000F9FB1 /* KeychainClient.swift in Sources */,
+				2C8B08D72B4F21CD004E8939 /* Codable+.swift in Sources */,
+				2C8B08DD2B502F05004E8939 /* Data+.swift in Sources */,
 				2CD9B2942B46EF4D00787EC5 /* AppView.swift in Sources */,
 				2CDF48AC2B4994930001644A /* SettingsFeature.swift in Sources */,
 				2C8B08CE2B4CA014004E8939 /* SettingsAppView.swift in Sources */,
 				2C4991952B48421000EC5BE3 /* MainTabView.swift in Sources */,
+				2C8B08D92B4F2455004E8939 /*  ASUserDetectionStatus+.swift in Sources */,
 				2C4991972B48421700EC5BE3 /* MainTabFeature.swift in Sources */,
 				2CDF48B62B4A191F0001644A /* CreateCacheView.swift in Sources */,
 			);

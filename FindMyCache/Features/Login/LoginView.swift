@@ -40,10 +40,7 @@ struct LoginView: View {
         case .success(let authorization):
           switch authorization.credential {
           case let appleIDCredential as ASAuthorizationAppleIDCredential:
-            let userIdentifier = appleIDCredential.user
-            let fullName = appleIDCredential.fullName
-            let email = appleIDCredential.email
-            store.send(.signedInWithApple(userIdentifier))
+            store.send(.signedInWithApple(appleIDCredential))
           default:
             break
           }
