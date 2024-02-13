@@ -31,7 +31,6 @@
 		2CD9B2772B46E55000787EC5 /* FindMyCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9B2762B46E55000787EC5 /* FindMyCacheTests.swift */; };
 		2CD9B2812B46E55000787EC5 /* FindMyCacheUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9B2802B46E55000787EC5 /* FindMyCacheUITests.swift */; };
 		2CD9B2832B46E55000787EC5 /* FindMyCacheUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9B2822B46E55000787EC5 /* FindMyCacheUITestsLaunchTests.swift */; };
-		2CD9B2912B46E65900787EC5 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 2CD9B2902B46E65900787EC5 /* ComposableArchitecture */; };
 		2CD9B2942B46EF4D00787EC5 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9B2932B46EF4D00787EC5 /* AppView.swift */; };
 		2CD9B2962B4701E300787EC5 /* PagerFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9B2952B4701E300787EC5 /* PagerFeature.swift */; };
 		2CDF48A22B495CC90001644A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDF48A12B495CC90001644A /* SettingsView.swift */; };
@@ -43,6 +42,7 @@
 		2CDF48B32B49A0B70001644A /* FrequentQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDF48B22B49A0B70001644A /* FrequentQuestionsView.swift */; };
 		2CDF48B62B4A191F0001644A /* CreateCacheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDF48B52B4A191F0001644A /* CreateCacheView.swift */; };
 		2CDF48B82B4A19DB0001644A /* CreateCacheFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDF48B72B4A19DB0001644A /* CreateCacheFeature.swift */; };
+		2CE2E7BC2B7B6D940039F79A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 2CE2E7BB2B7B6D940039F79A /* ComposableArchitecture */; };
 		A370EB042B74CC6700653E2C /* CreateUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A370EB032B74CC6700653E2C /* CreateUserResponse.swift */; };
 /* End PBXBuildFile section */
 
@@ -111,7 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CD9B2912B46E65900787EC5 /* ComposableArchitecture in Frameworks */,
+				2CE2E7BC2B7B6D940039F79A /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +363,7 @@
 			);
 			name = FindMyCache;
 			packageProductDependencies = (
-				2CD9B2902B46E65900787EC5 /* ComposableArchitecture */,
+				2CE2E7BB2B7B6D940039F79A /* ComposableArchitecture */,
 			);
 			productName = FindMyCache;
 			productReference = 2CD9B2622B46E54F00787EC5 /* FindMyCache.app */;
@@ -438,7 +438,7 @@
 			);
 			mainGroup = 2CD9B2592B46E54F00787EC5;
 			packageReferences = (
-				2CD9B28F2B46E65900787EC5 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				2CE2E7BA2B7B6D940039F79A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = 2CD9B2632B46E54F00787EC5 /* Products */;
 			projectDirPath = "";
@@ -842,20 +842,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2CD9B28F2B46E65900787EC5 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+		2CE2E7BA2B7B6D940039F79A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:pointfreeco/swift-composable-architecture.git";
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
 			requirement = {
-				branch = "observation-beta";
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2CD9B2902B46E65900787EC5 /* ComposableArchitecture */ = {
+		2CE2E7BB2B7B6D940039F79A /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2CD9B28F2B46E65900787EC5 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			package = 2CE2E7BA2B7B6D940039F79A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */

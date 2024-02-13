@@ -31,7 +31,7 @@ struct AppFeature {
   var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
-      case .login(.loginResult(.success)):
+      case .login(.delegate(.loggedIn)):
         state.setFor(isLogged: true)
         return .none
         
