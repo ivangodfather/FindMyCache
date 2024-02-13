@@ -7,23 +7,21 @@
 
 import ComposableArchitecture
 import Foundation
-import UIKit
 
 @Reducer
 struct AvatarFeature {
     @ObservableState
     struct State {
         var avatarData: Data?
-        var imagePickerType: UIImagePickerController.SourceType? = .photoLibrary
+        var imagePickerType: ImagePickerType?
         @Presents var confirmationDialog: ConfirmationDialogState<Action.ConfirmationDialog>?
-        var isSheetPresented = false
     }
 
     enum Action {
         case avatarTapped
         case confirmationDialog(PresentationAction<ConfirmationDialog>)
+        case setImagePickerType(ImagePickerType?)
         case setAvatarData(Data?)
-        case setSheetPresented(Bool)
 
         enum ConfirmationDialog {
             case camera
@@ -54,24 +52,22 @@ struct AvatarFeature {
 
             case .confirmationDialog(.presented(.photoLibrary)):
                 state.imagePickerType = .photoLibrary
-                state.isSheetPresented = true
                 return .none
 
             case .confirmationDialog(.presented(.camera)):
                 state.imagePickerType = .camera
-                state.isSheetPresented = true
                 return .none
 
             case .confirmationDialog:
                 return .none
 
-            case .setSheetPresented(let isPresented):
-                state.isSheetPresented = isPresented
+            case .setImagePickerType(let type):
+                state.imagePickerType = type
                 return .none
 
             case .setAvatarData(let data):
                 state.avatarData = data
-                state.isSheetPresented = false
+                state.imagePickerType = nil
                 return .none
             }
         }

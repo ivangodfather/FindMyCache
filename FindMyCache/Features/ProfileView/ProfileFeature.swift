@@ -11,20 +11,26 @@ import Foundation
 @Reducer
 struct ProfileFeature {
     @ObservableState
-    struct State: Equatable {
+    struct State {
+        var avatar = AvatarFeature.State()
         var name = ""
         var email = ""
-        var avatarData: Data?
     }
 
     enum Action: BindableAction {
+        case avatar(AvatarFeature.Action)
         case binding(BindingAction<State>)
     }
 
     var body: some ReducerOf<Self> {
         BindingReducer()
+        Scope(state: \.avatar, action: \.avatar) {
+            AvatarFeature()
+        }
         Reduce<State, Action> { state, action in
             switch action {
+            case .avatar:
+                return .none
             case .binding:
                 return .none
             }

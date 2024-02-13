@@ -13,11 +13,15 @@ struct ProfileView: View {
 
     var body: some View {
         Form {
-            Button {
-
-            } label: {
-                
+            VStack {
+                Spacer()
+                AvatarView(store: store.scope(state: \.avatar, action: \.avatar))
+                    .frame(width: 150, height: 150, alignment: .center)
+                Spacer()
             }
+            .listRowBackground(Color.clear)
+            .frame(maxWidth: .infinity)
+
             Section {
                 TextField("Your name here", text: $store.name)
             } footer: {
@@ -30,6 +34,7 @@ struct ProfileView: View {
                 Text("Should be a valid email.")
                     .font(.caption)
             }
+
             Button {
 
             } label: {

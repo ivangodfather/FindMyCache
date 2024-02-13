@@ -8,6 +8,24 @@
 import ComposableArchitecture
 import SwiftUI
 
+enum ImagePickerType: String, Identifiable {
+    case camera
+    case photoLibrary
+
+    var id: String {
+        rawValue
+    }
+
+    var sourceType: UIImagePickerController.SourceType {
+        switch self {
+        case .camera:
+            return .camera
+        case .photoLibrary:
+            return .photoLibrary
+        }
+    }
+}
+
 struct ImagePicker: UIViewControllerRepresentable {
     @Binding var imageData: Data?
     var sourceType: UIImagePickerController.SourceType = .photoLibrary

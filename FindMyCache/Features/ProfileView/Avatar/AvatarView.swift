@@ -14,7 +14,7 @@ struct AvatarView: View {
 
     var body: some View {
         image
-            .scaledToFit()
+            .aspectRatio(contentMode: .fill)
             .onTapGesture {
                 store.send(.avatarTapped)
             }
@@ -22,10 +22,10 @@ struct AvatarView: View {
                 state: \.confirmationDialog,
                 action: \.confirmationDialog
             ))
-            .sheet(isPresented: $store.isSheetPresented.sending(\.setSheetPresented)) {
+            .sheet(item: $store.imagePickerType.sending(\.setImagePickerType)) { type in
                 ImagePicker(
                     imageData: $store.avatarData.sending(\.setAvatarData),
-                    sourceType: store.imagePickerType ?? .photoLibrary
+                    sourceType: type.sourceType
                 )
                 .ignoresSafeArea(.all, edges: .bottom)
             }
@@ -51,5 +51,6 @@ struct AvatarView: View {
     AvatarView(store: .init(initialState: .init()) {
         AvatarFeature()
     })
-    .frame(width: 200)
+    .background(Color.red)
+    .frame(width: 150)
 }
