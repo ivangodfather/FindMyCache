@@ -24,7 +24,10 @@ struct SettingsFeature {
     Reduce<State, Action> { state, action in
       switch action {
       case .logoutButtonTapped:
-        let result = Result { try keychainClient.delete(.userIdentifier) }
+          let result = Result {
+              try keychainClient.delete(.refreshToken)
+              try keychainClient.delete(.accessToken)
+          }
         return .send(.logout(result))
 
       case .logout(.failure(let error)):

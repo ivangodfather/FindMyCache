@@ -57,7 +57,7 @@ struct CreateCacheView: View {
           Button {
             
           } label: {
-            Text("Create new cache")
+            Text("Create")
               .bold()
               .frame(maxWidth: .infinity)
           }

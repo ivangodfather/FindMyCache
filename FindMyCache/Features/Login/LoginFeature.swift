@@ -49,7 +49,7 @@ struct LoginFeature {
             case .signedInWithApple(let authorizationCredential):
                 return .run { send in
                     let params = CreateUserRequestParams(
-                        email: authorizationCredential.email ?? "", // TODO: Should be optional or show another flow for forcing the email with authcre.fullName
+                        email: authorizationCredential.email ?? "ivanruizmonjo@gmail.com", // TODO: Should be optional or show another flow for forcing the email with authcre.fullName
                         username: authorizationCredential.user,
                         avatarData: nil,
                         authorizationCredential: authorizationCredential

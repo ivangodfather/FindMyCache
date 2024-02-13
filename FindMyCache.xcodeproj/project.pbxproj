@@ -22,6 +22,10 @@
 		2C8B08D92B4F2455004E8939 /*  ASUserDetectionStatus+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B08D82B4F2455004E8939 /*  ASUserDetectionStatus+.swift */; };
 		2C8B08DB2B4F2800004E8939 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B08DA2B4F2800004E8939 /* User.swift */; };
 		2C8B08DD2B502F05004E8939 /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B08DC2B502F05004E8939 /* Data+.swift */; };
+		2CA35DC52B7B85A90082D036 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA35DC42B7B85A90082D036 /* ProfileView.swift */; };
+		2CA35DC72B7B85B50082D036 /* ProfileFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA35DC62B7B85B50082D036 /* ProfileFeature.swift */; };
+		2CA35DC92B7B94570082D036 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA35DC82B7B94570082D036 /* AvatarView.swift */; };
+		2CA35DCB2B7B9D520082D036 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA35DCA2B7B9D520082D036 /* ImagePicker.swift */; };
 		2CAEE01D2B488403000F9FB1 /* AppleAuthorizationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAEE01C2B488403000F9FB1 /* AppleAuthorizationClient.swift */; };
 		2CAEE01F2B492544000F9FB1 /* KeychainClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAEE01E2B492544000F9FB1 /* KeychainClient.swift */; };
 		2CD9B2662B46E54F00787EC5 /* FindMyCacheApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9B2652B46E54F00787EC5 /* FindMyCacheApp.swift */; };
@@ -79,6 +83,10 @@
 		2C8B08D82B4F2455004E8939 /*  ASUserDetectionStatus+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ASUserDetectionStatus+.swift"; sourceTree = "<group>"; };
 		2C8B08DA2B4F2800004E8939 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2C8B08DC2B502F05004E8939 /* Data+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+.swift"; sourceTree = "<group>"; };
+		2CA35DC42B7B85A90082D036 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		2CA35DC62B7B85B50082D036 /* ProfileFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFeature.swift; sourceTree = "<group>"; };
+		2CA35DC82B7B94570082D036 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		2CA35DCA2B7B9D520082D036 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		2CAEE0152B487D1F000F9FB1 /* FindMyCache.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FindMyCache.entitlements; sourceTree = "<group>"; };
 		2CAEE01C2B488403000F9FB1 /* AppleAuthorizationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthorizationClient.swift; sourceTree = "<group>"; };
 		2CAEE01E2B492544000F9FB1 /* KeychainClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainClient.swift; sourceTree = "<group>"; };
@@ -206,6 +214,17 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		2CA35DC32B7B855A0082D036 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				2CA35DC42B7B85A90082D036 /* ProfileView.swift */,
+				2CA35DC62B7B85B50082D036 /* ProfileFeature.swift */,
+				2CA35DC82B7B94570082D036 /* AvatarView.swift */,
+				2CA35DCA2B7B9D520082D036 /* ImagePicker.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
 		2CAEE0162B488312000F9FB1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +237,7 @@
 		2CAEE0172B488318000F9FB1 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				2CA35DC32B7B855A0082D036 /* ProfileView */,
 				2CDF48B42B4A18E20001644A /* CreateCache */,
 				2CDF48A32B4963010001644A /* CacheMap */,
 				2C4991902B4840B600EC5BE3 /* App */,
@@ -497,7 +517,9 @@
 				2CDF48B02B499E0F0001644A /* UserSectionView.swift in Sources */,
 				2C4991872B48233400EC5BE3 /* PagerItem.swift in Sources */,
 				2CD9B2962B4701E300787EC5 /* PagerFeature.swift in Sources */,
+				2CA35DC92B7B94570082D036 /* AvatarView.swift in Sources */,
 				2CDF48A52B4963120001644A /* MapView.swift in Sources */,
+				2CA35DCB2B7B9D520082D036 /* ImagePicker.swift in Sources */,
 				2CDF48A22B495CC90001644A /* SettingsView.swift in Sources */,
 				2CD9B2662B46E54F00787EC5 /* FindMyCacheApp.swift in Sources */,
 				2CAEE01D2B488403000F9FB1 /* AppleAuthorizationClient.swift in Sources */,
@@ -506,6 +528,7 @@
 				2CAEE01F2B492544000F9FB1 /* KeychainClient.swift in Sources */,
 				2C8B08D72B4F21CD004E8939 /* Codable+.swift in Sources */,
 				2C8B08DD2B502F05004E8939 /* Data+.swift in Sources */,
+				2CA35DC52B7B85A90082D036 /* ProfileView.swift in Sources */,
 				2CD9B2942B46EF4D00787EC5 /* AppView.swift in Sources */,
 				2CDF48AC2B4994930001644A /* SettingsFeature.swift in Sources */,
 				2C8B08CE2B4CA014004E8939 /* SettingsAppView.swift in Sources */,
@@ -513,6 +536,7 @@
 				2C8B08D92B4F2455004E8939 /*  ASUserDetectionStatus+.swift in Sources */,
 				2C4991972B48421700EC5BE3 /* MainTabFeature.swift in Sources */,
 				2CDF48B62B4A191F0001644A /* CreateCacheView.swift in Sources */,
+				2CA35DC72B7B85B50082D036 /* ProfileFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -48,9 +48,8 @@ struct AppFeature {
         
       case .onAppear:
         return .run { send in
-          let currentUserIdentifier = try? keychainClient.get(.userIdentifier)
-          let isLogged = await appleAuthorizationClient.isLogged(userIdentifier: currentUserIdentifier ?? "")
-          await send(.userLogged(isLogged))
+          let accessToken = try? keychainClient.get(.accessToken)
+          await send(.userLogged(accessToken != nil))
         }
         
       case .userLogged(let isLogged):
