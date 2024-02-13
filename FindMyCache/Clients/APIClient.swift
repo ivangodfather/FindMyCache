@@ -31,7 +31,7 @@ struct CreateUserRequestParams: Encodable {
 import ComposableArchitecture
 @DependencyClient
 struct APIClient {
-  var createUser: @Sendable (CreateUserRequestParams) async throws -> User
+  var createUser: @Sendable (CreateUserRequestParams) async throws -> CreateUserResponse
 }
 
 extension APIClient: TestDependencyKey {
@@ -52,7 +52,7 @@ extension APIClient: DependencyKey {
         print(response.debugDescription)
         debugPrint(debugData, terminator: "\n\n")
       }
-      return try JSONDecoder().decode(User.self, from: data)
+      return try JSONDecoder().decode(CreateUserResponse.self, from: data)
     }
   )
 }

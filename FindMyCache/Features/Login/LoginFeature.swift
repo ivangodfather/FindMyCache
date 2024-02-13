@@ -42,12 +42,11 @@ struct LoginFeature {
             authorizationCredential: authorizationCredential
           )
           print("authorizationCode \(authorizationCredential.authorizationCode.utf8 ?? "")")
-          let result = await Result { try await self.apiClient.createUser(params) }
-          await send(.signInResult(result))
+            let result = await Result { try await self.apiClient.createUser(params).user }
+            await send(.signInResult(result))
         }
       case .signInResult(let result):
-        print(result)
-        return .none
+          return .send(.loginResult(.success(())))
       }
     }
   }

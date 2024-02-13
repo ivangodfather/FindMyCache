@@ -43,6 +43,7 @@
 		2CDF48B32B49A0B70001644A /* FrequentQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDF48B22B49A0B70001644A /* FrequentQuestionsView.swift */; };
 		2CDF48B62B4A191F0001644A /* CreateCacheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDF48B52B4A191F0001644A /* CreateCacheView.swift */; };
 		2CDF48B82B4A19DB0001644A /* CreateCacheFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDF48B72B4A19DB0001644A /* CreateCacheFeature.swift */; };
+		A370EB042B74CC6700653E2C /* CreateUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A370EB032B74CC6700653E2C /* CreateUserResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		2CDF48B22B49A0B70001644A /* FrequentQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequentQuestionsView.swift; sourceTree = "<group>"; };
 		2CDF48B52B4A191F0001644A /* CreateCacheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCacheView.swift; sourceTree = "<group>"; };
 		2CDF48B72B4A19DB0001644A /* CreateCacheFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCacheFeature.swift; sourceTree = "<group>"; };
+		A370EB032B74CC6700653E2C /* CreateUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,13 +189,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		2C8B08CB2B4C9FDB004E8939 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		2C8B08CC2B4CA004004E8939 /* SettingsAppView */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,7 +210,6 @@
 			isa = PBXGroup;
 			children = (
 				2C8B08CA2B4C9FD3004E8939 /* Extensions */,
-				2CAEE0182B48831E000F9FB1 /* Core */,
 				2CDF48A82B4965A50001644A /* Models */,
 			);
 			path = Common;
@@ -233,13 +227,6 @@
 				2CDF48A02B495CB80001644A /* Settings */,
 			);
 			path = Features;
-			sourceTree = "<group>";
-		};
-		2CAEE0182B48831E000F9FB1 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		2CAEE01B2B4883EB000F9FB1 /* Clients */ = {
@@ -275,7 +262,6 @@
 		2CD9B2642B46E54F00787EC5 /* FindMyCache */ = {
 			isa = PBXGroup;
 			children = (
-				2C8B08CB2B4C9FDB004E8939 /* Views */,
 				2CAEE01B2B4883EB000F9FB1 /* Clients */,
 				2CAEE0162B488312000F9FB1 /* Common */,
 				2CAEE0172B488318000F9FB1 /* Features */,
@@ -336,6 +322,7 @@
 			children = (
 				2CDF48A92B4965BE0001644A /* Cache.swift */,
 				2C8B08DA2B4F2800004E8939 /* User.swift */,
+				A370EB032B74CC6700653E2C /* CreateUserResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -500,6 +487,7 @@
 				2CD9B2682B46E54F00787EC5 /* LoginView.swift in Sources */,
 				2C49918F2B48407D00EC5BE3 /* LoginFeature.swift in Sources */,
 				2CDF48AA2B4965BE0001644A /* Cache.swift in Sources */,
+				A370EB042B74CC6700653E2C /* CreateUserResponse.swift in Sources */,
 				2C8B08D32B4CA066004E8939 /* Bundle+.swift in Sources */,
 				2C49918A2B483DD100EC5BE3 /* PagerItemView.swift in Sources */,
 				2CDF48A72B4963A60001644A /* MapFeature.swift in Sources */,
